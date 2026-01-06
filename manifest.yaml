@@ -1,17 +1,17 @@
 version: 0.0.1
 type: plugin
 author: ty-huangxin
-name: hse_safe_checklist
+name: ty_checklist
 label:
-  en_US: hse_safe_checklist
-  ja_JP: hse_safe_checklist
-  zh_Hans: hse_safe_checklist
-  pt_BR: hse_safe_checklist
+  en_US: TY Checklist Generator
+  ja_JP: TYチェックリスト生成
+  zh_Hans: TY检查表生成器
+  pt_BR: Gerador de Lista TY
 description:
-  en_US: HSE安全检查表生成插件
-  ja_JP: HSE安全检查表生成插件
-  zh_Hans: HSE安全检查表生成插件
-  pt_BR: HSE安全检查表生成插件
+  en_US: Generate formatted Excel checklists for various purposes
+  ja_JP: さまざまな目的のためにフォーマットされたExcelチェックリストを生成
+  zh_Hans: 生成各类格式化的Excel检查表
+  pt_BR: Gerar listas de verificação Excel formatadas para vários propósitos
 icon: icon.svg
 icon_dark: icon-dark.svg
 resource:
@@ -34,7 +34,7 @@ resource:
       size: 1048576
 plugins:
   tools:
-    - provider/hse_safe_checklist.yaml
+    - provider/ty_checklist.yaml
 meta:
   version: 0.0.1
   arch:

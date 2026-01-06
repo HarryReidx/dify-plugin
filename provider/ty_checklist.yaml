@@ -1,0 +1,21 @@
+identity:
+  author: "ty-huangxin"
+  name: "ty_checklist"
+  label:
+    en_US: "TY Checklist Generator"
+    zh_Hans: "TY检查表生成器"
+    pt_BR: "Gerador de Lista TY"
+    ja_JP: "TYチェックリスト生成"
+  description:
+    en_US: "Generate formatted Excel checklists for various purposes"
+    zh_Hans: "生成各类格式化的Excel检查表"
+    pt_BR: "Gerar listas de verificação Excel formatadas"
+    ja_JP: "さまざまな目的のためにフォーマットされたExcelチェックリストを生成"
+  icon: "icon.svg"
+
+tools:
+  - tools/dev_standard.yaml
+  - tools/hse_safe.yaml
+extra:
+  python:
+    source: provider/ty_checklist.py

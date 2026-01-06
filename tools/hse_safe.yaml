@@ -1,0 +1,34 @@
+identity:
+  name: "hse_safe"
+  author: "ty-huangxin"
+  label:
+    en_US: "HSE Safety Checklist Generator"
+    zh_Hans: "HSE安全管理检查表生成器"
+    pt_BR: "Gerador de Lista de Segurança HSE"
+    ja_JP: "HSE安全管理チェックリスト生成"
+description:
+  human:
+    en_US: "Generate formatted Excel checklist for HSE safety management with merged cells and styling"
+    zh_Hans: "生成HSE安全管理检查表，支持单元格合并和样式设置"
+    pt_BR: "Gerar lista de verificação Excel formatada para gestão de segurança HSE"
+    ja_JP: "HSE安全管理のためのフォーマットされたExcelチェックリストを生成"
+  llm: "A tool that generates a beautifully formatted Excel checklist file for HSE (Health, Safety, Environment) safety management from structured JSON input. It supports table headers, section grouping, cell merging, custom styling (SimSun font, specific row heights, column widths, borders), and automatic text wrapping. Perfect for creating HSE safety management checklists or any structured inspection forms."
+parameters:
+  - name: checklist_json
+    type: string
+    required: true
+    label:
+      en_US: Checklist JSON
+      zh_Hans: 检查表 JSON
+      pt_BR: JSON da Lista de Verificação
+      ja_JP: チェックリスト JSON
+    human_description:
+      en_US: "JSON string containing checklist data with tableName, columns, sections, and items"
+      zh_Hans: "包含检查表数据的 JSON 字符串，需包含 tableName、columns、sections 和 items"
+      pt_BR: "String JSON contendo dados da lista de verificação com tableName, columns, sections e items"
+      ja_JP: "tableName、columns、sections、items を含むチェックリストデータの JSON 文字列"
+    llm_description: "A JSON string with the following structure: {\"tableName\": \"string\", \"columns\": [\"序号\", \"检查内容\", \"检查方式\", \"检查参考依据\", \"检查情况\", \"存在问题和建议\", \"得分\"], \"sections\": [{\"title\": \"string\", \"items\": [{\"id\": \"string\", \"content\": \"string\", \"method\": \"string\", \"reference\": \"string\", \"situation\": \"string\", \"suggestion\": \"string\", \"score\": \"string\"}]}]}. The tool will parse this JSON and generate a formatted Excel file with proper styling (SimSun font, specific row heights, column widths, borders, and cell merging) according to HSE safety management checklist requirements."
+    form: llm
+extra:
+  python:
+    source: tools/hse_safe.py
