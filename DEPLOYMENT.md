@@ -52,21 +52,9 @@ dify plugin publish
 
 1. **部署新插件**
    ```bash
-   dify plugin dev
-   # 或
-   dify plugin publish
+    dify plugin package ./yourapp
    ```
 
-2. **在 Dify 中更新**
-   - 禁用旧插件 `hse_safe_checklist`（如果存在）
-   - 启用新插件 `ty_checklist`
-
-3. **更新工作流**
-   - 删除旧的 `hse_safe_checklist` 工具节点
-   - 添加新的工具节点：
-     - 对于HSE安全检查表：选择 **HSE安全管理检查表生成器** (hse_safe)
-     - 对于研发规范检查表：选择 **研发规范检查表生成器** (dev_standard)
-   - 连接相同的输入参数（JSON 格式不变）
 
 ### 兼容性说明
 

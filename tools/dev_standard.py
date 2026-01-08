@@ -122,6 +122,9 @@ class HseSafeChecklistTool(Tool):
                 cell.border = thin_border
             ws.row_dimensions[current_row].height = 30  # 设置行高为30
             current_row += 1
+            
+            # 冻结至第二行（表头行）
+            ws.freeze_panes = "A3"
 
             # 3. 写入 sections 和 items
             for section in sections:

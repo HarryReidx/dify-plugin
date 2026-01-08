@@ -83,6 +83,9 @@ def test_excel_generation():
     ws.row_dimensions[current_row].height = 30  # 第2行行高30
     current_row += 1
     
+    # 冻结至第二行（表头行）
+    ws.freeze_panes = "A3"
+    
     # 写入数据
     total_items = 0
     for section in sections:
